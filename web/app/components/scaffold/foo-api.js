@@ -11,7 +11,7 @@ angular.module( 'scaffold.foo.fooAPI', [] )
         };
 
         API.get = function ( identity ) {
-            return $http.get( 'http://www.192.168.27.14.xip.io/index.php?r=scaffold/foo', {
+            return $http.get( 'http://www.192.168.27.14.xip.io/index.php?r=scaffold/foo/view', {
                 params: {
                     id: identity
                 }
@@ -42,6 +42,15 @@ angular.module( 'scaffold.foo.fooAPI', [] )
         //    } );
         //};
         //
+
+        API.destroy = function ( identity ) {
+            return $http.delete( 'http://www.192.168.27.14.xip.io/index.php?r=scaffold/foo/delete', {
+                params: {
+                    id: identity
+                }
+            } );
+        };
+
         //API.destroy = function ( model ) {
         //    return delaySuccess( function () {
         //        var all = getStorageItems(),
