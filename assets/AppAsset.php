@@ -30,6 +30,8 @@ class AppAsset extends AssetBundle
         'app/scaffold/todo/todo.js',
         'app/scaffold/foo/foo.js',
         'app/scaffold/foo/foo-show.js',
+        'app/scaffold/foo/foo-create.js',
+        'app/scaffold/foo/foo-edit.js',
         'app/scaffold/foo/foo-destroy.js',
     ];
     public $depends = [

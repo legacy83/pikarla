@@ -4,62 +4,38 @@ angular.module( 'scaffold.foo.fooAPI', [] )
 
     .service( 'fooAPI', [ '$http', function ( $http ) {
 
-        var API = this;
+        var API = this,
+            apiRouteUrl = 'http://www.192.168.27.14.xip.io?',
+            isIdentity = function ( identity ) {
+                return !_.isNaN( parseInt( identity ) );
+            },
+            routeTo = function ( r, identity ) {
+                var query = { r: r };
+                if ( isIdentity( identity ) ) {
+                    query.id = parseInt( identity );
+                }
+
+                return apiRouteUrl + $.param( query );
+            };
 
         API.all = function () {
-            return $http.get( 'http://www.192.168.27.14.xip.io/index.php?r=scaffold/foo' );
+            return $http.get( routeTo( 'scaffold/foo' ) );
         };
 
         API.get = function ( identity ) {
-            return $http.get( 'http://www.192.168.27.14.xip.io/index.php?r=scaffold/foo/view', {
-                params: {
-                    id: identity
-                }
-            } );
+            return $http.get( routeTo( 'scaffold/foo/view', identity ) );
         };
 
-        //API.post = function ( model ) {
-        //    return delaySuccess( function () {
-        //        var all = getStorageItems(),
-        //            saved = { id: nextStorageId() };
-        //
-        //        all.push( _.merge( saved, model ) );
-        //        saveStorageItems( all );
-        //
-        //        return saved;
-        //    } );
-        //};
-        //
-        //API.put = function ( model ) {
-        //    return delaySuccess( function () {
-        //        var all = getStorageItems(),
-        //            saved = _.find( all, byIdentity( model.id ) );
-        //
-        //        _.merge( saved, model );
-        //        saveStorageItems( all );
-        //
-        //        return saved;
-        //    } );
-        //};
-        //
+        API.post = function ( model ) {
+            return $http.post( routeTo( 'scaffold/foo/create' ), model );
+        };
+
+        API.put = function ( model ) {
+            return $http.put( routeTo( 'scaffold/foo/update', model.id ), model );
+        };
 
         API.destroy = function ( identity ) {
-            return $http.delete( 'http://www.192.168.27.14.xip.io/index.php?r=scaffold/foo/delete', {
-                params: {
-                    id: identity
-                }
-            } );
+            return $http.delete( routeTo( 'scaffold/foo/delete', identity ) );
         };
-
-        //API.destroy = function ( model ) {
-        //    return delaySuccess( function () {
-        //        var all = getStorageItems(),
-        //            destroyed = _.remove( all, byIdentity( model.id ) );
-        //
-        //        saveStorageItems( all );
-        //
-        //        return destroyed;
-        //    } );
-        //};
 
     } ] );
