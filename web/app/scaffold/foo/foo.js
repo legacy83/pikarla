@@ -8,7 +8,7 @@ angular.module( 'scaffold.foo', [
 
     .config( [ '$routeProvider', function ( $routeProvider ) {
         $routeProvider.when( '/@foo', {
-            templateUrl: 'scaffold/foo/foo.html',
+            templateUrl: 'app/scaffold/foo/foo.html',
             controller: 'FooController'
         } );
     } ] )
@@ -16,9 +16,8 @@ angular.module( 'scaffold.foo', [
     .controller( 'FooController',
     [ '$scope', 'fooAPI', function ( $scope, fooAPI ) {
 
-        fooAPI.all().then( function ( result ) {
+        fooAPI.all().success( function ( result ) {
             $scope.models = result;
         } );
 
-    }
-    ] );
+    } ] );

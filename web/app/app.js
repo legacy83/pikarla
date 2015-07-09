@@ -8,7 +8,7 @@ angular.module( 'pikarla', [
      * You can copy and paste from scaffold
      * modules when creating new functionality.
      */
-    //'scaffold.foo',
+    'scaffold.foo',
     'scaffold.todo'
 ] )
 

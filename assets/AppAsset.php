@@ -20,6 +20,7 @@ class AppAsset extends AssetBundle
 
         'app/components/flashMessages/flashMessages.js',
         'app/components/scaffold/todo-api.js',
+        'app/components/scaffold/foo-api.js',
 
         /*
          * app/functionality
@@ -27,6 +28,7 @@ class AppAsset extends AssetBundle
 
         'app/site/home/home.js',
         'app/scaffold/todo/todo.js',
+        'app/scaffold/foo/foo.js',
     ];
     public $depends = [
         'app\assets\AppBowerAsset',

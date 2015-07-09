@@ -9,7 +9,7 @@ angular.module( 'flashMessages', [] )
             controller: function ( $scope ) {
                 $scope.flash = flash;
             },
-            templateUrl: 'components/flashMessages/flashMessages.html'
+            templateUrl: 'app/components/flashMessages/flashMessages.html'
         };
     } ] )
 

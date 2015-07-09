@@ -1,17 +1,15 @@
 'use strict';
 
-angular.module( 'scaffold.foo.fooAPI', [ 'dummy' ] )
+angular.module( 'scaffold.foo.fooAPI', [] )
 
-    .service( 'fooAPI', [ function () {
+    .service( 'fooAPI', [ '$http', function ( $http ) {
 
         var API = this;
 
-        //API.all = function () {
-        //    return delaySuccess( function () {
-        //        return getStorageItems();
-        //    } );
-        //};
-        //
+        API.all = function () {
+            return $http.get( 'http://www.192.168.27.14.xip.io/index.php?r=scaffold/foo' );
+        };
+
         //API.get = function ( identity ) {
         //    return delaySuccess( function () {
         //        return _.find( getStorageItems(), byIdentity( identity ) );
