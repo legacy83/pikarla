@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module( 'ngUba', [
+angular.module( 'pikarla', [
     'ngRoute',
-    //'site.home',
+    'site.home'
 
     /*
      * You can copy and paste from scaffold

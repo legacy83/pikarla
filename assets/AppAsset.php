@@ -12,7 +12,8 @@ class AppAsset extends AssetBundle
         'app/app.css',
     ];
     public $js = [
-        'app/app.js'
+        'app/app.js',
+        'app/site/home/home.js',
     ];
     public $depends = [
         'app\assets\AppBowerAsset',
