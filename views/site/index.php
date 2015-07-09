@@ -1,51 +1,40 @@
 <?php /* @var $this yii\web\View */ ?>
-<?php $this->title = 'Yuba'; ?>
+<?php $this->title = 'Pikarla'; ?>
 
-<div class="jumbotron">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand brand" href="#/home">Pikarla</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#/home">Home</a></li>
+                <li><a href="#/@todo">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/@todo">@todo</a></li>
+                <li><a href="#/@foo">@foo</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-    <h1>Welcome to Yuba</h1>
+<div class="container">
 
-    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus
-        commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    <div flash-messages></div>
 
-    <p><a class="btn btn-success btn-lg" href="https://github.com/trsenna/yuba" target="_blank">Just fork Yuba today</a></p>
+    <div ng-view></div>
+
+    <hr>
+
+    <footer>
+        <p>&copy; Pikarla <?php echo date( 'Y' ); ?></p>
+    </footer>
 
 </div>
-
-<div class="row">
-
-    <div class="col-md-6">
-
-        <h4>Subheading</h4>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-        <h4>Subheading</h4>
-
-        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
-            fermentum.</p>
-
-        <h4>Subheading</h4>
-
-        <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-
-    </div>
-
-    <div class="col-md-6">
-
-        <h4>Subheading</h4>
-
-        <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-        <h4>Subheading</h4>
-
-        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
-            fermentum.</p>
-
-        <h4>Subheading</h4>
-
-        <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-
-    </div>
-
-</div>
+<!-- /container -->

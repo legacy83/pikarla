@@ -4,22 +4,46 @@
 <?php /* @var $exception Exception */ ?>
 <?php $this->title = $name; ?>
 
-<div class="alert alert-danger">
-    <?= nl2br( \yii\helpers\Html::encode( $message ) ); ?>
-</div>
+<div class="container">
 
-<div class="page-header">
-    <h1><?= \yii\helpers\Html::encode( $this->title ); ?></h1>
-</div>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand brand" href="<?= Yii::$app->homeUrl; ?>">Pikarla</a>
+            </div>
+        </div>
+    </nav>
 
-<div class="row">
+    <div class="alert alert-danger">
+        <?= nl2br( \yii\helpers\Html::encode( $message ) ); ?>
+    </div>
 
-    <div class="col-md-12">
+    <div class="page-header">
+        <h1><?= \yii\helpers\Html::encode( $this->title ); ?></h1>
+    </div>
 
-        <p>The above error occurred while the Web server was processing your request.</p>
+    <div class="row">
 
-        <p>Please contact us if you think this is a server error. Thank you.</p>
+        <div class="col-md-12">
+
+            <p>The above error occurred while the Web server was processing your request.</p>
+
+            <p>Please contact us if you think this is a server error. Thank you.</p>
+
+        </div>
 
     </div>
 
+    <hr>
+
+    <footer>
+        <p>&copy; Pikarla <?php echo date( 'Y' ); ?></p>
+    </footer>
+
 </div>
+<!-- /container -->
