@@ -1,0 +1,9 @@
+body {
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+div.container a.brand {
+    background: url("../images/yii2-logo.png") no-repeat scroll 0 10px transparent;
+    padding: 15px 20px 15px 40px;
+}
