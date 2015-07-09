@@ -10,12 +10,14 @@ angular.module( 'scaffold.foo.fooAPI', [] )
             return $http.get( 'http://www.192.168.27.14.xip.io/index.php?r=scaffold/foo' );
         };
 
-        //API.get = function ( identity ) {
-        //    return delaySuccess( function () {
-        //        return _.find( getStorageItems(), byIdentity( identity ) );
-        //    } );
-        //};
-        //
+        API.get = function ( identity ) {
+            return $http.get( 'http://www.192.168.27.14.xip.io/index.php?r=scaffold/foo', {
+                params: {
+                    id: identity
+                }
+            } );
+        };
+
         //API.post = function ( model ) {
         //    return delaySuccess( function () {
         //        var all = getStorageItems(),

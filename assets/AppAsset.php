@@ -29,6 +29,7 @@ class AppAsset extends AssetBundle
         'app/site/home/home.js',
         'app/scaffold/todo/todo.js',
         'app/scaffold/foo/foo.js',
+        'app/scaffold/foo/foo-show.js',
     ];
     public $depends = [
         'app\assets\AppBowerAsset',
