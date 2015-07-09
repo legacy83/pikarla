@@ -2,17 +2,12 @@
 
 namespace scaffold\models;
 
-use yii\base\Model;
+use yii\db\ActiveRecord;
 
-class Foo extends Model
+class Foo extends ActiveRecord
 {
-    public $id;
-
-    static function buildFromId( $id )
+    public static function tableName()
     {
-        $foo = new Foo();
-        $foo->id = $id;
-
-        return $foo;
+        return 'foo';
     }
 }
