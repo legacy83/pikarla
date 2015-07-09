@@ -9,19 +9,12 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
+        'app/app.css',
     ];
     public $js = [
+        'app/app.js'
     ];
     public $depends = [
-        'yii\web\YiiAsset',
-        'yii\web\JqueryAsset',
+        'app\assets\AppBowerAsset',
     ];
-
-    public function registerAssetFiles( $view )
-    {
-        $view->registerCssFile( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' );
-        $view->registerJsFile( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js' );
-        parent::registerAssetFiles( $view );
-    }
 }
