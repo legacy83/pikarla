@@ -2,14 +2,14 @@
 
 angular.module( 'pikarla', [
     'ngRoute',
-    'site.home'
+    'site.home',
 
     /*
      * You can copy and paste from scaffold
      * modules when creating new functionality.
      */
     //'scaffold.foo',
-    //'scaffold.todo'
+    'scaffold.todo'
 ] )
 
     .config( [ '$routeProvider', function ( $routeProvider ) {
