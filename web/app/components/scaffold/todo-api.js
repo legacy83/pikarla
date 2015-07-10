@@ -1,22 +1,11 @@
 'use strict';
 
-angular.module( 'scaffold.todo.todoAPI', [] )
+angular.module( 'scaffold.todo.todoAPI', [ 'apiUtils' ] )
 
-    .service( 'todoAPI', [ '$http', function ( $http ) {
+    .service( 'todoAPI', [ '$http', 'apiUtils', function ( $http, apiUtils ) {
 
         var API = this,
-            apiRouteUrl = 'http://www.192.168.27.14.xip.io?',
-            isIdentity = function ( identity ) {
-                return !_.isNaN( parseInt( identity ) );
-            },
-            routeTo = function ( r, identity ) {
-                var query = { r: r };
-                if ( isIdentity( identity ) ) {
-                    query.id = parseInt( identity );
-                }
-
-                return apiRouteUrl + $.param( query );
-            };
+            routeTo = apiUtils.routeTo;
 
         API.all = function () {
             return $http.get( routeTo( 'scaffold/to-do' ) );
