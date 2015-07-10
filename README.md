@@ -1,2 +1,2 @@
-# yuba
-Just one more custom Yii2 starter application
+# pikarla
+Just one more custom Angular/Yii2 starter application
