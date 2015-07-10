@@ -29,22 +29,22 @@ angular.module( 'flashMessages', [] )
             _.remove( messages, byMessageKey( key ) );
         };
 
-        flash.success = _.partial( messageAndOrGet, 'success' );
+        flash.success = _.partial( alertMessage, 'success' );
 
-        function messageAndOrGet( key, message ) {
+        function alertMessage( key, message ) {
 
             if ( _.isEmpty( message ) ) {
                 return _.where( messages, byMessageKey( key ) );
             }
 
-            var successMessage = { key: key, content: message };
-            messages.push( successMessage );
+            var alertMessage = { key: key, content: message };
+            messages.push( alertMessage );
 
             _.delay( function () {
                 $rootScope.$apply( function () {
-                    _.remove( messages, successMessage );
+                    _.remove( messages, alertMessage );
                 } );
-            }, 12000 );
+            }, 9000 );
 
         }
 
