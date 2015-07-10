@@ -2,9 +2,11 @@
 
 angular.module( 'apiUtils', [] )
 
-    .service( 'apiUtils', [ 'apiBaseUrl', function ( apiBaseUrl ) {
+    .service( 'apiUtils', [ '$location', function ( $location ) {
 
         var apiUtils = this,
+            host = $location.host(),
+            protocol = $location.protocol(),
             isIdentity = function ( identity ) {
                 return !_.isNaN( parseInt( identity ) );
             };
@@ -15,7 +17,10 @@ angular.module( 'apiUtils', [] )
                 query.id = parseInt( identity );
             }
 
-            return apiBaseUrl + $.param( query );
+            var apiLocation = [ protocol, '://', host, '?' ];
+            apiLocation = apiLocation.join( '' );
+
+            return apiLocation + $.param( query );
         };
 
-    } ] ).constant( 'apiBaseUrl', 'http://www.192.168.27.14.xip.io?' );
+    } ] );
