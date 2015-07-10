@@ -10,4 +10,11 @@ class Foo extends ActiveRecord
     {
         return 'foo';
     }
+
+    public function rules()
+    {
+        return [
+            [ [ 'one', 'two', 'three' ], 'safe' ],
+        ];
+    }
 }

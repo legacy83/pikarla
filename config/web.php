@@ -24,6 +24,11 @@ $config = [
              */
 
             'cookieValidationKey' => 'W8p?(G4k32p@S5M',
+
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ],
+
         ],
 
         /*
