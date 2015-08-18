@@ -4,7 +4,7 @@ angular.module( 'scaffold.foo' )
 
     .config( [ '$routeProvider', function ( $routeProvider ) {
         $routeProvider.when( '/@foo/edit/:id', {
-            templateUrl: 'app/scaffold/foo/foo-edit.html',
+            templateUrl: 'scaffold/foo/foo-edit.html',
             controller: 'FooEditController'
         } );
     } ] )

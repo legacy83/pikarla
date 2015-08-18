@@ -4,7 +4,7 @@ angular.module( 'scaffold.foo' )
 
     .config( [ '$routeProvider', function ( $routeProvider ) {
         $routeProvider.when( '/@foo/show/:id', {
-            templateUrl: 'app/scaffold/foo/foo-show.html',
+            templateUrl: 'scaffold/foo/foo-show.html',
             controller: 'FooShowController'
         } );
     } ] )

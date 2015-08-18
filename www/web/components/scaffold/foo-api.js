@@ -5,26 +5,26 @@ angular.module( 'scaffold.foo.fooAPI', [ 'apiUtils' ] )
     .service( 'fooAPI', [ '$http', 'apiUtils', function ( $http, apiUtils ) {
 
         var API = this,
-            routeTo = apiUtils.routeTo;
+            resource = _.partial( apiUtils.buildResourceUrl, 'scaffold/foo' );
 
         API.all = function () {
-            return $http.get( routeTo( 'scaffold/foo' ) );
+            return $http.get( resource() );
         };
 
         API.get = function ( identity ) {
-            return $http.get( routeTo( 'scaffold/foo/view', identity ) );
+            return $http.get( resource( identity ) );
         };
 
         API.post = function ( model ) {
-            return $http.post( routeTo( 'scaffold/foo/create' ), model );
+            return $http.post( resource(), model );
         };
 
         API.put = function ( model ) {
-            return $http.put( routeTo( 'scaffold/foo/update', model.id ), model );
+            return $http.put( resource( model.id ), model );
         };
 
         API.destroy = function ( identity ) {
-            return $http.delete( routeTo( 'scaffold/foo/delete', identity ) );
+            return $http.delete( resource( identity ) );
         };
 
     } ] );
