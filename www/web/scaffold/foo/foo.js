@@ -1,9 +1,12 @@
 'use strict';
 
-angular.module( 'scaffold.foo', [
+angular.module( 'pikarla.scaffold.foo', [
     'ngRoute',
     'api.scaffold.foo',
-    'flash'
+    'pikarla.scaffold.foo-create',
+    'pikarla.scaffold.foo-destroy',
+    'pikarla.scaffold.foo-edit',
+    'pikarla.scaffold.foo-show'
 ] )
 
     .config( [ '$routeProvider', function ( $routeProvider ) {

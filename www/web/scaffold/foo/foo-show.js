@@ -1,6 +1,10 @@
 'use strict';
 
-angular.module( 'scaffold.foo' )
+angular.module( 'pikarla.scaffold.foo-show', [
+    'ngRoute',
+    'api.scaffold.foo',
+    'flash'
+] )
 
     .config( [ '$routeProvider', function ( $routeProvider ) {
         $routeProvider.when( '/@foo/show/:id', {

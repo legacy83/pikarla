@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module( 'site.home', [ 'ngRoute' ] )
+angular.module( 'pikarla.site.home', [ 'ngRoute' ] )
 
     .config( [ '$routeProvider', function ( $routeProvider ) {
         $routeProvider.when( '/home', {

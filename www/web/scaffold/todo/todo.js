@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module( 'scaffold.todo', [
+angular.module( 'pikarla.scaffold.todo', [
     'ngRoute',
     'api.scaffold.todo'
 ] )
