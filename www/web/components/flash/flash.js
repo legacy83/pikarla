@@ -1,17 +1,6 @@
 'use strict';
 
-angular.module( 'flashMessages', [] )
-
-    .directive( 'flashMessages', [ 'flash', function ( flash ) {
-        return {
-            restrict: 'A',
-            scope: {},
-            controller: function ( $scope ) {
-                $scope.flash = flash;
-            },
-            templateUrl: 'components/flashMessages/flashMessages.html'
-        };
-    } ] )
+angular.module( 'flash', [] )
 
     .service( 'flash', [ '$rootScope', function ( $rootScope ) {
 
