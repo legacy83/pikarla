@@ -14,7 +14,6 @@ angular.module( 'scaffold.foo' )
         function ( $scope, $routeParams, fooAPI ) {
 
             fooAPI.get( $routeParams.id ).success( function ( result ) {
-                console.log(result);
                 $scope.model = result;
             } );
 

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module( 'utils.apiUtils', [] )
+angular.module( 'pikarla.utils.api-utils', [] )
 
     .service( 'apiUtils', [ '$location', function ( $location ) {
 

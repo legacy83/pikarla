@@ -2,7 +2,7 @@
 
 angular.module( 'pikarla.scaffold.todo', [
     'ngRoute',
-    'api.scaffold.todo'
+    'pikarla.api.scaffold.todo'
 ] )
 
     .config( [ '$routeProvider', function ( $routeProvider ) {

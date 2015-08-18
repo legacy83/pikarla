@@ -1,6 +1,8 @@
 'use strict';
 
-angular.module( 'flash', [] )
+angular.module( 'pikarla.flash.flash', [
+    'pikarla.flash.flash-messages'
+] )
 
     .service( 'flash', [ '$rootScope', function ( $rootScope ) {
 

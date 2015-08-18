@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module( 'flash' )
+angular.module( 'pikarla.flash.flash-messages', [] )
 
     .directive( 'flashMessages', [ 'flash', function ( flash ) {
         return {

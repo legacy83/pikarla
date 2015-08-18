@@ -2,8 +2,8 @@
 
 angular.module( 'pikarla.scaffold.foo-destroy', [
     'ngRoute',
-    'api.scaffold.foo',
-    'flash'
+    'pikarla.api.scaffold.foo',
+    'pikarla.flash.flash'
 ] )
 
     .config( [ '$routeProvider', function ( $routeProvider ) {

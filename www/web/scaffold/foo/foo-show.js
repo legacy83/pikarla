@@ -2,8 +2,8 @@
 
 angular.module( 'pikarla.scaffold.foo-show', [
     'ngRoute',
-    'api.scaffold.foo',
-    'flash'
+    'pikarla.api.scaffold.foo',
+    'pikarla.flash.flash'
 ] )
 
     .config( [ '$routeProvider', function ( $routeProvider ) {
@@ -18,7 +18,6 @@ angular.module( 'pikarla.scaffold.foo-show', [
         function ( $scope, $routeParams, fooAPI ) {
 
             fooAPI.get( $routeParams.id ).success( function ( result ) {
-                console.log(result);
                 $scope.model = result;
             } );
 

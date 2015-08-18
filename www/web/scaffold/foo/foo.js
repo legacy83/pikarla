@@ -2,7 +2,7 @@
 
 angular.module( 'pikarla.scaffold.foo', [
     'ngRoute',
-    'api.scaffold.foo',
+    'pikarla.api.scaffold.foo',
     'pikarla.scaffold.foo-create',
     'pikarla.scaffold.foo-destroy',
     'pikarla.scaffold.foo-edit',
