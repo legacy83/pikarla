@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module( 'scaffold.foo.fooAPI', [ 'apiUtils' ] )
+angular.module( 'api.scaffold.foo', [ 'apiUtils' ] )
 
     .service( 'fooAPI', [ '$http', 'apiUtils', function ( $http, apiUtils ) {
 

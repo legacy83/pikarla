@@ -2,7 +2,7 @@
 
 angular.module( 'scaffold.todo', [
     'ngRoute',
-    'scaffold.todo.todoAPI'
+    'api.scaffold.todo'
 ] )
 
     .config( [ '$routeProvider', function ( $routeProvider ) {

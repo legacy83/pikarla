@@ -3,7 +3,7 @@
 angular.module( 'scaffold.foo', [
     'ngRoute',
     'flashMessages',
-    'scaffold.foo.fooAPI'
+    'api.scaffold.foo'
 ] )
 
     .config( [ '$routeProvider', function ( $routeProvider ) {
