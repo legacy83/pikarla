@@ -8,8 +8,8 @@ angular.module( 'pikarla', [
      * You can copy and paste from scaffold
      * modules when creating new functionality.
      */
-    //'scaffold.foo',
-    //'scaffold.todo'
+    'scaffold.foo',
+    'scaffold.todo'
 ] )
 
     .config( [ '$routeProvider', function ( $routeProvider ) {
