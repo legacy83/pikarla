@@ -22,8 +22,8 @@ echo "$apache2Add301Redirect" | bash -s "$domain" "www.$domain"
 # Front Project Setup
 ##########################################
 
-#rm -rf "/var/www/www.$domain/public_html"
-#ln -s /vagrant/www/web "/var/www/www.$domain/public_html"
+rm -rf "/var/www/www.$domain/public_html"
+ln -s /vagrant/www/web "/var/www/www.$domain/public_html"
 
 ##########################################
 # API Project Setup

@@ -18,4 +18,4 @@ cd /vagrant/console/ && composer --no-interaction update
 
 # -- WWW Install/Update
 # =========================================
-#cd /vagrant/www && bower install
+cd /vagrant/www && bower install

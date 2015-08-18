@@ -1,0 +1,12 @@
+{
+  "name": "trsenna/pikarla",
+  "description": "Just one more custom Angular/Yii2 starter application",
+  "dependencies": {
+    "lodash": "~3.9.3",
+    "jquery": "~2.1.4",
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.3.0"
+  }
+}
