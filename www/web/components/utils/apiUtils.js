@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module( 'apiUtils', [] )
+angular.module( 'utils.apiUtils', [] )
 
     .service( 'apiUtils', [ '$location', function ( $location ) {
 

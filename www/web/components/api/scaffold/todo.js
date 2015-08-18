@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module( 'api.scaffold.todo', [ 'apiUtils' ] )
+angular.module( 'api.scaffold.todo', [ 'utils.apiUtils' ] )
 
     .service( 'todoAPI', [ '$http', 'apiUtils', function ( $http, apiUtils ) {
 
